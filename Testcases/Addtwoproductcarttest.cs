@@ -12,7 +12,6 @@ namespace Pagemodel.Testcases
     {
 
         [Test]
-
         public async Task addtwoproduct()
         {
             var addtwoproduct = new Addtwoproductincarts(page);

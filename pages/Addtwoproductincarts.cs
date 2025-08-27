@@ -24,20 +24,16 @@ namespace Pagemodel.pages
 
         public async Task AddTwoProductsToCartAndVerify()
         {
-           
-
-           
-            // Go to Products page
             await page.Locator("//a[@href='/products']").ClickAsync();
             await Assertions.Expect(page.Locator("//h2[normalize-space()='All Products']")).ToBeVisibleAsync();
 
             // Add first product
-           await page.Locator("(//div[@class='product-overlay'])[1]").HoverAsync();
-            await page.Locator("//div[@class='col-sm-9 padding-right']//div[2]//div[1]//div[1]//div[2]//div[1]//a[1]").ClickAsync();
+            await page.Locator("(//div[@class='single-products'])[1]").HoverAsync();
+            await page.Locator("(//a[contains(@class,'add-to-cart')])[1]").ClickAsync();
             await page.Locator("//button[normalize-space()='Continue Shopping']").ClickAsync();
 
             // Add second product
-            await page.Locator("(//div[@class='product-overlay'])[2]").HoverAsync();
+            await page.Locator("(//div[@class='single-products'])[2]").HoverAsync();
             await page.Locator("//div[3]//div[1]//div[1]//div[2]//div[1]//a[1]").ClickAsync();
 
             // View Cart
@@ -48,7 +44,6 @@ namespace Pagemodel.pages
             int count = await cartItems.CountAsync();
             if (count < 2) throw new Exception("Less than 2 products found in cart.");
 
-            // Verify price, quantity, and total for each product
             for (int i = 0; i < count; i++)
             {
                 var price = await cartItems.Nth(i).Locator(".cart_price").InnerTextAsync();
