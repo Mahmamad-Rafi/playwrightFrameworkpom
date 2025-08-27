@@ -383,3 +383,4 @@ C:\Users\rafis\source\repos\Pagemodel\Pagemodel\obj\Debug\net8.0\refint\Pagemode
 C:\Users\rafis\source\repos\Pagemodel\Pagemodel\obj\Debug\net8.0\Pagemodel.pdb
 C:\Users\rafis\source\repos\Pagemodel\Pagemodel\obj\Debug\net8.0\Pagemodel.genruntimeconfig.cache
 C:\Users\rafis\source\repos\Pagemodel\Pagemodel\obj\Debug\net8.0\ref\Pagemodel.dll
+C:\Users\rafis\source\repos\Pagemodel\Pagemodel\obj\Debug\net8.0\Pagemodel.sourcelink.json
